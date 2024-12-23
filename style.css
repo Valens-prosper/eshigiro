@@ -1,0 +1,371 @@
+ /*general css to style navbar and homepage*/
+
+
+
+  *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  :root{
+   --footer-clr: #FF44CC;
+   --photo0: url('photos/sky1.jpg');
+   --photo1: url('photos/bg1.jpg');
+   --photo2: url('photos/bg2.jpg');
+   --photo3: url('photos/bg3.jpg');
+   --photo4: url('photos/bg4.jpg');
+   --photo5: url('photos/bg5.jpg');
+   --photo6: url('photos/bg6.jpg');
+   --photo7: url('photos/photo7.jpg');
+   --photo8: url('photos/photo8.jpg');
+   --photo9: url('photos/photo9.jpg');
+   --photo10: url('photos/photo10.jpg');
+   --photo11: url('photos/photo11.jpg');
+   --photo12: url('photos/photo12.jpg');
+  }
+  body{
+    font-family: georgia;
+   }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: auto;
+    left: 0;
+    right:0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px 18px;
+   }
+   .navbar .logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    color: yellow;
+    margin-right: 5px;
+   }
+   .nav-links{
+    display: flex;
+    gap: 3vw;
+    white-space: nowrap;
+    transition:  0.4s;
+    }
+    
+    .nav-links li{
+     list-style: none;
+     position: relative;
+     }
+   
+    .nav-links li a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px;
+      transition:  1s;
+      }
+      
+    .nav-links li a:hover{
+     
+     color: yellow;
+     border-radius: 5px;
+     }
+    .dropdown-menu{
+      display: none;
+      position: absolute;
+      z-index: 100;
+      background-color: #004080;
+      top: 100%;
+      left: 0;
+      list-syle: none;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+     .dropdown-menu li a{
+      display: block;
+      padding: 8px 10px;
+      }
+      .nav-links .dropdown:hover .dropdown-menu{
+       display: block;
+       }
+      .hamburger {
+        display: none ;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+       .hamburger .line{
+        width: 25px;
+        height: 3px;
+        background-color: white;
+      }
+    
+
+    footer{
+      cursor: pointer;
+      position: relative;
+      bottom:0;
+      overflow-x: hidden;
+      padding: 0 5vw 5vw 5vw;
+      width: auto;
+      display: grid;
+      grid-template-rows: repeat(5, auto);
+      background: linear-gradient( to bottom, transparent 30%, #ff44cc 70%);
+      gap: 10px;  
+    }
+   .who-we-are {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    .ft-logo{
+      overflow:hidden;
+      padding: 0;
+      width: 200px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+   .footer-logo{
+     transform: scaley(3) translatey(36%);
+     display: inline-block;
+     white-space: nowrap;
+     border-right: 2px solid violet;
+   }
+    .logo-in-full {
+      color:violet;
+     display: inline-block;
+    }
+    .footer-menu h3, .contact-info h3 {
+      border-bottom: 2px solid grey ;
+      margin-bottom: 20px;
+     }
+    .footer-menu, .contact-info{
+     line-height: 1.6;
+      display: inline-block;
+     }
+    .contact-info li{
+      padding-left: 5px;
+      list-style-position: inside;
+     }
+    .footer-menu-contact{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+     }
+    .ft-nested-item{
+     padding: 5px;
+     display: inline-flex;
+     background: violet;
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+     border-radius: 3px;
+     margin-right:3px;
+     white-space: wrap;
+    }
+   .ft-social-media-items{
+     display: flex;
+     white-space: wrap;
+    }
+
+    
+  .staff-wraper {
+   margin-top: 57px;
+   margin-inline: auto;
+   padding: 20px;
+   }
+  .members{
+   columns: 3;
+   margin-top: 40px;
+    }
+   li::marker{
+    color: violet
+    }
+  li {
+    list-style-position: inside;
+  }
+  .administractions{
+    position: relative;
+    margin-inline: auto;
+    margin-block: 90px;
+    width: 380px;
+    height: 280px;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite 1s;
+   }
+ @keyframes animate {
+   0% {
+    transform: perspective(1000px) rotatey(0deg); 
+   }
+   5%, 20% {
+    transform: perspective(1000px) rotatey(72deg); 
+   }
+  25%, 40% {
+    transform: perspective(1000px) rotatey(144deg); 
+   }
+   45%, 60% {
+    transform: perspective(1000px) rotatey(216deg); 
+   }
+   65%, 80% {
+    transform: perspective(1000px) rotatey(288deg); 
+   }
+   85%, 100%{
+    transform: perspective(1000px) rotatey(360deg);
+   }
+  }
+  .administractions div{
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    border-right: 5px solid white;
+    box-shadow: -3px 3px 5px rgba white;
+    height:100%;
+    backface-visibility: hidden;
+    background: rgba(0, 0, 0, .1);
+    transform: rotatey(calc(var(--i) * 72deg))
+                translatez(260px);
+   }
+   .administractions div h2,
+    .administractions div h3{
+     border-bottom: 20px;
+   }
+   .administractions div email{
+     position: absolute;
+     bottom: 15px;
+     left: 15px;
+    } 
+  .administractions div::before{
+   content="";
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+   box-shadow: inset 0 0 15px red;
+  }   
+  .profile-card{
+    position: relative;
+    padding:10px;
+    margin-bottom: 45px;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .6);
+    overflow: hidden;
+    transition: all .3s ease;
+    min-height: 200px;
+    text-align: center;
+    
+    }
+ .profile-card::before {
+    content: "";
+    top:100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: gold;
+     position: absolute;
+    transition: top 1s ease;
+    }
+  
+  .profile-card:hover::before {
+    position: absolute;
+    top:0;
+  }
+  .details{
+    position: absolute;
+    
+    display: none;
+    text-align: center;
+  } 
+ .profile-card:hover{
+   transform:translate(5px, 10px);
+  }
+ .profile-card:hover .profile-card #subject,
+ .profile-card h1,
+  .profile-card .details{
+   position: relative;
+   z-index: 2;
+   }
+  .profile-card:hover .more, .profile-card:hover .profile-card h2{
+    display: none;
+   }
+    
+ .profile-card:hover .details{
+    display: inline-block;
+    top:5px;
+    
+  }
+.more{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  border: none;
+  margin: 3px;
+  color: lightblue;
+  padding: 3px;
+  font-size: 18px;
+  background: transparent;
+ }
+ .profile-card h1, .staff-wraper h1{
+   border-bottom: 1px solid grey;
+   margin-bottom: 18px;
+ }
+ .staff-wraper{
+   text-align: center;
+}
+ .staff-wraper .pp{
+   padding: 20px 20vw;
+   font-size: 1.3rem; 
+   }
+
+
+   @media (max-width: 768px){      
+       html{
+       font-size: 14px;
+       line-height: 1.6;
+       overflow-x: hidden
+      }
+       .navbar{
+        padding: 10px 3vw;
+      }
+      .nav-links{
+        font-size: min(3vw, 10px);
+        gap: 2vw;
+      }
+      .nav-links li a{
+       padding: 8px 2px;
+      }
+      .navbar .logo{
+       font-size: min(3vw, 10px);
+       margin-right: 5px;
+      }
+    
+    .contacts{
+         display: grid;
+         grid-template-rows: 1fr 1fr;
+         gap: 5px;
+      }
+ 
+   }   
+      
+  @media(max-width: 400px){
+    .footer-menu, .contact-info{
+      display: block;
+     }
+    .footer-menu-contact{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+     }
+    .navbar .logo{
+       font-size: min(2vw, 8px);
+       transform: scaley(4);
+       margin-right: 5px;
+      }
+   }
+ 

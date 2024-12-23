@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset=" UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Welcome to Es higiro! Come and learn great things with     us">
+   <meta name="keywords" content="education, rwanda, es higiro, academics,    secondary     school, leaning, dayschool">
+   <meta name="author" content="valens iradukunda// Bello Amore">
+   <meta property="og:title" content="Contacts of Es Higiro">
+   <meta property="og:description" content="Welcome to Es higiro!">
+   <meta property="og:url" content="">
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:title" content="Contacts of Es Higiro">
+   <meta property="twitter:description" content="Welcome to Es higiro! Contact us and learn    great things with usss">
+   <title> Pay scholl fees </title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="donate.css">
+ </head>
+ <body>
+  <header>
+   <nav class="navbar">
+   <div class="logo">
+     ES HIGIRO
+   </div>
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown"><a href="staff.html">Staff</a>
+      <ul class="dropdown-menu">
+      <li><a href="staff.html#admin">Leadership</a></li>
+      <li><a href="staff.html#teacher">Teachers</a></li>
+    </ul>
+  </li>
+    
+    <li class="dropdown">Academics
+      <ul class="dropdown-menu">
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="students.html#dashboard">Dashboard</a></li>
+      <li><a href="students.html">Students</a></li>
+    </ul>
+    </li>
+    <li><a href="Events.html">Events</a></li>
+    <li class="dropdown"><a href="about.html">About Us</a>
+      <ul class="dropdown-menu">
+      <li><a href="about.html#mission">Mission</a></li>
+      <li><a href="history.html">History</a></li>
+      </ul>
+     </li>
+    <li><a href="contacts.html">Contacts</a></li>
+    </ul> 
+    <div class="hamburger">
+     <div class="line"></div>
+     <div class="line"></div>
+     <div class="line"></div>
+   </div>
+   </nav>
+  </header>
+<!-- -------------------------------------------------------------------------------------- -->  
+  <main>
+   <div class="payment">
+   <div class="payment-container">
+        <h1>School Payment</h1>
+        <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student name" />
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount (RWF)</label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder="e.g., 2507XXXXXXXX" />
+        </div>
+        <center><button type="submit" style="--clr:#FF44CC" class="btn donate-btn" id="payButton"><span>PAY NOW</span><i></i></button>
+        <p id="status" style="margin-top: 15px; text-align: center; background-color:#0df3ff;"></p>
+    </div>
+     </div>
+  </main>
+  <script>
+        document.getElementById('payButton').addEventListener('click', function() {
+            const studentName = document.getElementById('studentName').value;
+            const amount = document.getElementById('amount').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+
+            if (studentName && amount && phoneNumber) {
+                document.getElementById('status').textContent = "Processing payment...";
+                setTimeout(() => {
+                    document.getElementById('status').textContent = `Payment of RWF ${amount} for ${studentName} was successful!`;
+                }, 2000); // Simulate delay
+            } else {
+                document.getElementById('status').textContent = "Please fill in all fields.";
+            }
+        });
+    </script>
+ </body>
+</html>

@@ -1,0 +1,546 @@
+.header{
+      width: auto;
+      height: 80vh;
+      background:#bf2ebf;
+      overflow: hidden;
+    }
+ .header-photo-wraper{
+      perspective: 100px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+   
+ .header-photo-wraper img{
+      width: 16vw;
+      min-width: 200px;
+      height: auto;
+      perspective: 1000px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity:1;
+      margin: 0 20px 20px 0;
+  
+  }
+  
+ .header-photo-wraper img:nth-child(10){
+   animation: slide1 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(2){
+   animation: slide2 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(3){
+   animation: slide3 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(4){
+   animation: slide4 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(5){
+   animation: slide5 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(6){
+   animation: slide6 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(7){
+   animation: slide7 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(8){
+   animation: slide8 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(9){
+   animation: slide9 10s infinite;
+  }
+ .header-photo-wraper img:nth-child(11){
+   animation: slide10 10s infinite;
+  }
+  
+    
+ @keyframes slide1{
+   0%{
+    transform: translatez(60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translatez(-20px);
+  }
+ }
+ @keyframes slide2{
+   0%{
+    transform: translate3d(-100%, -50%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(70%, -120%, -20px);
+  }
+ }
+ @keyframes slide3{
+   0%{
+    transform: translate3d(-50%, 100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(85%, -150%, -20px);
+  }
+ }
+  @keyframes slide4{
+   0%{
+    transform: translate3d(100%, 100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(20%, 55%, -20px);
+  }
+ }
+ @keyframes slide5{
+   0%{
+    transform: translate3d(-100%, 100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(-110%, 55%, -20px);
+  }
+ }
+ @keyframes slide6{
+   0%{
+    transform: translate3d(0, -100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(-65%, -10%, -20px);
+  }
+ }
+ @keyframes slide7{
+   0%{
+    transform: translate3d(100%, 0, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(-140%, -135%, -20px);
+  }
+ }
+ @keyframes slide8{
+   0%{
+    transform: translate3d(100%, 50%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(-75%, -95%, -20px);
+  }
+ }
+ @keyframes slide9{
+   0%{
+    transform: translate3d(60%, 100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(140%, -60%, -20px);
+  }
+ }
+ @keyframes slide10{
+   0%{
+    transform: translate3d(130%, 100%, 60px);
+    opacity:1;
+    }
+ 
+   100%{
+    opacity:1;
+    transform: translate3d(-95%, -65%, -20px);
+  }
+ }
+
+.donate-btn {
+  position: relative;
+  top: 75px;
+  left: 84vw;
+  width: 8vw;
+  min-width: 80px;
+  background: #444;
+  color: #fff;
+   margin-right:20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+   padding: .7em;
+  font-size: .8rem;
+  transition: 0.2s;
+  animation: box 3s infinite alternate;
+}
+
+.donate-btn:hover {
+  transform: scale(1.2);
+}
+  @keyframes box {
+  0% {
+    box-shadow: #27272c;
+    letter-spacing: 0.1rem;
+    background: #444;
+    color: yellow;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+    letter-spacing: 0.15rem;
+    background: var(--clr);
+    color: var(--clr);
+  }
+}
+
+.donate-btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+.donate-btn span {
+  position: relative;
+  z-index: 1;
+}
+.donate-btn i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+ .donate-btn i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+  animation: move1 3s infinite alternate;
+}
+
+ .donate-btn i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+  animation: move2 3s infinite alternate;
+}
+ @keyframes move1 {
+  0% {
+    transform: translateX(0);
+    width: 10px;
+    left: 80%;
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    width: 15px;
+    left: 20%;
+    
+  }
+}
+
+ @keyframes move2 {
+  0% {
+    transform: translateX(0);
+    width: 10px;
+    left: 20%;
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    width: 15px;
+    left: 80%;
+    
+  }
+}
+
+ .header-photo-wraper img:hover{
+    border: 2px solid yellow;
+    z-index: 200;
+    animation-play-state: paused;
+    cursor: pointer;
+   }
+ 
+  .white{
+   display: none;
+    padding: 20px;
+   font-size: 2rem;
+   column:3;
+   gap: 10px;
+   border-radius: 35px;
+   background: rgba(255, 255, 255,1);
+   perspective: 1000px;
+   transform-style: perserve-3d;
+   transform: rotatex(55deg) skew(-20deg) translatey(-45%);
+   height: 80vh;
+   width: 100%;
+   z-index: 100;
+   cursor: pointer;
+   
+   }
+ .white p{
+  marign-bottom: 50px;
+  
+  }
+  .prg{
+	
+	margin-top:40px; 
+	display: inline-block; 
+	border-bottom: 5px solid #FF44CC;
+  }
+  
+ .text-on-white{
+      font-weight: bold;
+      white-space: nowrap;
+      font-size: 2rem; 
+      position: absolute;
+      top: 50%;
+      left: 150%;
+      transform: translate(0, -50%);
+      animation: showWhiteText 25s infinite;
+     }
+   .text1{
+    animation-delay: 0s;
+     }
+   .text2{
+    animation-delay: 5s;
+     }
+   .text3{
+    animation-delay: 10s;
+     }
+   .text4{
+    animation-delay: 15s;
+     }
+   .text5{
+    animation-delay: 20s;
+     }
+ 
+ @keyframes showWhiteText {
+    0% { left: 150%;
+     }
+    10% { left: 30% ;
+     }
+     18% { left: 30% ;
+     }
+     20% { left: 150% ;
+     }
+     100% { left: 150%;
+     }
+   }
+
+     .rwandan-flag{
+       display: grid;
+       grid-template-rows: 2fr 1fr 1fr;
+       transform-style: preserve-3d;
+       min-width: 80px;
+       width: 7vw;
+       aspect-ratio: 2/1;
+       position: absolute;
+       left: 40px;
+       top: 80px;
+       animation: flagAnim 2s infinite alternate;
+      }
+      
+      .rwandan-flag div:nth-child(1){
+        background: blue;
+       }
+       .rwandan-flag div:nth-child(2){
+        background: yellow;
+       }
+        .rwandan-flag div:nth-child(3){
+        background: green;
+       }
+       @keyframes flagAnim {
+       from{
+         transform: scale(1);}
+       to { transform: scale(1.6);
+      }
+     }
+    
+    .welcome-label{
+      position: absolute;
+      top: 85%;
+      left: 1%;
+      font-family: monospace;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #39FF14;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid white;
+      animation: typing 5s alternate infinite 1s;
+    }
+    
+   @keyframes typing {
+       0%{ width: 0;
+       }
+       100%{
+        width: 21ch;
+     }
+    }
+    
+   
+   .section3{
+      columns: 4;
+      gap: 40px;
+      background-color: white;
+      border: 5px solid lightblue;
+     }
+   .section3-division {
+       font-size: 1.5rem;
+       height: 450px;
+       aspect-ratio: 2/5;
+       text-align: center;
+       clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+       border-radius: 25px;
+       padding: 30px 10px;
+       background: lightblue;
+      }
+   .numerical-data {
+       display: grid;
+       grid-template-columns: 150px 150px 150px;
+       justify-content: center;
+       text-align: center;
+       column-gap: 5VW;
+       row-gap: 30px;
+       background: linear-gradient( 70deg,transparent 50%,
+       rgba(0, 0, 0, .08) 50% );
+       background-size: 200% 200%;
+       background-color: gold;
+       padding-block: 30px;
+       box-shadow: inset 4px 4px 5px rgba(0, 0, 0, .6),
+                   inset -4px -4px 5px rgba(0, 0, 0, .6);
+       transition: .5s;
+   }   
+     
+     .numerical-data .datum{
+        display: inline-block;
+     }
+      .datum span{
+        padding: 5px;
+        border-radius: 100%;
+        box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 1);
+        display: block;
+        font-size: 3rem;
+        font-weight: bold;
+        transition: .5s;
+      }
+     .numerical-data:hover{
+       background-color: #FF44CC;
+       background-position: 100% 100%;
+      } 
+     .numerical-data:hover .datum span{
+       background: rgba(0, 0, 0, .1);
+       box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 1);
+      }
+     .numerical-data:hover .datum span:hover{
+       transform: scale(1.1);
+       cursor: pointer;
+      }
+     
+    .section5{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: #FF44CC;
+      line-height: 1.6;
+      font-size: 1.3rem;
+    }
+     .section5 p {
+       background: rgba(0, 0, 0, .4);
+       color: white;
+       padding: 15px;
+       margin: 10px;
+       box-shadow: inset 3px 3px 5px rgba(0, 0, 0, .6);
+    }
+    .message-form {
+       max-width: 500px;
+       margin: 50px auto;
+       padding: 20px;
+       background: white;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       border-radius: 8px;
+       transition: 1s;
+        }
+     .message-form:hover{
+        transform: scale(1.01);
+        box-shadow: 0 0 25px #FF44CC;
+       }
+       .message-form input,
+       .message-form textarea,
+        .message-form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+       .message-form textarea{
+          resize: none;
+          text-transform: capitalize;
+        }
+        .message-form input:focus,
+        .message-form textarea:focus {
+            border-color: #0078ff;
+            outline: none;
+        }
+        .message-form button {
+            background-color: #FF44CC;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 2rem;
+        }
+        .message-form button:hover {
+            background-color: #ff44cc85;
+        }
+        .message-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #444;
+        }
+   section{
+    cursor: pointer;
+    background-color: #f8f8ff; 
+    min-height: 200px;
+    border-radius: 5px;
+    width: auto;
+    margin: 20px
+   }
+
+  
+ 

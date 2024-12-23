@@ -1,0 +1,138 @@
+/* ----------ABOUT--------- */
+
+ body{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    }
+ .mission {
+    line-height: 1.6;
+    cursor: pointer;
+    background-color: #f8f8ff; 
+    min-height: 200px;
+    border-radius: 5px;
+    width: auto;
+    margin: 20px;
+    padding-top: 70px ;
+    padding-bottom: 20px ;
+   }
+ .mission h1{
+    text-align: center;
+ }
+ main{
+     margin-top:60px;
+     display: grid;
+     grid-template-rows: repeat(4, auto);
+   }
+ .mission .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    gap: 20px;
+    padding: 20px;
+   }
+  .mission p label{
+    display: block;
+    margin-left: 40px;
+    margin-block: 5px;
+  }
+  .mission p label span {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5); 
+    background: violet;
+    padding-inline: 5px;
+    margin-inline: 20px;
+    border-radius: 5px;
+  }
+   .combination ul li{
+   padding-left: 40px;
+  }
+ .combination ul{
+   list-style-position: inside;
+ }
+ .description{
+   line-height: 1;
+   padding-inline: 20px;
+   box-shadow: 0px 2px 5px rgba(0,0,0, .5); 
+  }
+  .description ul{
+    line-height: 1.6;
+    display: block;
+    padding-inline: 100px;
+    position: relative;
+    padding-block: 20px;
+   }
+   .description span:first-child,
+   .description span:nth-child(2){
+      font-size: 3rem;
+   }
+   .history{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    line-height: 1.6;
+    padding: 50px;
+    }
+   .history h1, .history h3 {
+    color: #004080;
+   }
+   .history h3{
+    padding: 20px 0 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+  }
+   .history ul{
+    list-style-position: inside;
+    font-weight: 700;
+    padding: 30px;
+    font-size: 1.1rem;
+    }
+   .introduction p {
+    padding-right: 20px;
+    border-right: 2px solid grey;
+  }
+  .history-btn-wrapper{
+    perspective : 1200px;
+    position: relative;
+   }
+  .history-btn{
+     position: absolute;
+     top: 25%;
+     width: 25vw;
+     height: 100px;
+     margin-inline:auto;
+     padding: auto;
+     background:  rgba(0, 0, 0, .08);
+     clip-path: polygon(0% 15%, 70% 15%, 70% 0%, 100% 50%, 70% 100%, 70% 85%, 0% 85%);
+     transition: .5s;
+     transform-style: preserve-3d;
+     transform: rotatey(60deg);
+   }
+   .history-btn::before {
+    content: "";
+    top:0;
+    left: 70%;
+    height: 100%;
+    width: 100%;
+    background: gold;
+     position: absolute;
+    transition: left 1s ease;
+    }
+   .history-btn:hover{
+     transform: rotatey(0deg);
+     cursor: pointer;
+    }
+   .history-btn:hover::before{
+     left: 0;
+    }
+  .history-btn button{
+    position: absolute;
+    z-index:2;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border: none;
+    background-color: transparent; 
+    margin: 25px;
+   } 
+  footer{
+   margin-top: 200px;
+  } 

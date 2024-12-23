@@ -1,0 +1,65 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="login.css">
+</head>
+<body>
+	
+	<div class="background">
+		<video autoplay muted loop class="video">
+			<source src="2.mp4" type="video/mp4" class="v"></source>
+		</video>
+		
+		<div class="login">
+                       <div class="login-form">
+                         <h1>LOGIN</h1>
+                            <form>
+           			 <div id="errorMessage" class="error-message"></div> <!-- Error message div -->
+            			<input type="text" id="username" placeholder="UserName"><br><br>
+            			<input type="password" id="password" placeholder="Password"><br><br><br>
+            			<button id="loginButton">Login</button>
+        		</form>
+    </div>
+</div>
+ </div>
+ 	<script>
+    document.getElementById('loginButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Get the values of username and password fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('errorMessage'); // Error message div
+
+        // Clear previous error messages
+        errorMessage.style.display = "none";
+
+        // Mock credentials for validation
+        const mockUsername = "admin";
+        const mockPassword = "1234";
+
+        // Validate input
+        if (!username || !password) {
+            errorMessage.style.display = "block";
+            errorMessage.textContent = "Please fill in both Username and Password.";
+            return;
+        }
+
+        // Check credentials
+        if (username === mockUsername && password === mockPassword) {
+            errorMessage.style.display = "block";
+            errorMessage.style.color = "green"; // Change color for success
+            errorMessage.textContent = "Login successful! Welcome, " + username + ".";
+            setTimeout(() => {
+                window.location.href = "index.html"; // Redirect after success
+            }, 1000); // Optional delay before redirecting
+        } else {
+            errorMessage.style.display = "block";
+            errorMessage.textContent = "Invalid Username or Password. Please try again.";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">S
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            width: cal(200vw + 80px);
+            transform: translateX(50vw); /* Start off-screen */
+            animation: moveX 10s infinite linear;
+            padding: 30px;
+	    
+        }
+
+        .box {
+            width: 50vw;
+            height: 60vh;
+            border-radius: 8px;
+            box-shadow: 5px 5px 5px grey;
+            
+        }
+       .photo-container{
+           width: cal(200vw + 80px);
+           overflow-x:;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-wrap: wrap;
+           flex-basis: 100px;
+           gap: 30px;
+           padding: 10vw;
+        }
+       .photo-container .photo{
+           display: flex;
+           border-radius: 8px;
+           width: 300px;
+           transition: 1s;
+        }
+       .photo-container .photo:hover{
+           transform: scale(1.5);
+           cursor: pointer;
+           border: 2px solid yellow;
+       }
+       .photo-container .photo img{
+           width:100%;
+           height: 100%;
+           border-radius: 8px;
+         }
+       .box img,
+        .photo img{
+        height: 100%;
+        width: 100%;
+      }
+    @keyframes moveX {
+           0% {
+             transform: translateX(50vw);
+          }
+           
+           20% {
+             transform: translateX(0vw);
+           }
+            
+             50% {
+             transform: translateX(0vw);
+		}
+             70% {
+             transform: translateX(-50vw);
+		}
+             
+      
+            100% {
+                transform: translateX(-50vw);
+            }
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><img src="photos/photo7.jpg" alt=""></div>
+        <div class="box"><img src="photos/photo8.jpg" alt=""></div>
+        <div class="box"><img src="photos/photo9.jpg" alt=""></div>
+        <div class="box"><img src="photos/photo10.jpg" alt=""></div>
+    </div>
+     <div class="photo-container">
+	 <div class="photo"><img src="photos/photo1.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo2.jpg" alt=""></div>
+	<div class="photo"><img src="photos/photo3.jpg" alt=""></div>
+	<div class="photo"><img src="photos/photo4.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo5.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo6.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo7.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo8.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo9.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo10.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo11.jpg" alt=""></div>
+	 <div class="photo"><img src="photos/photo12.jpg" alt=""></div>
+
+
+
+    </div>
+</body>
+</html>

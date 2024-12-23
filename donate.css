@@ -1,0 +1,201 @@
+ .payment{
+    height: 100vh;
+    width: 100vw;
+    background: url('photos/bg6.jpg');
+    background-position :center;
+    background-size: cover;
+    perspective: 1000px;
+   }
+ .payment-container{
+   background: rgba(13, 243, 255, .4);
+   backdrop-filter: blur(20px);
+   height: 340px;
+   padding: 2rem;
+   width: 50vw;
+   text-align: center;
+   z-index: 2;
+   position: relative;
+   top: 25%;
+   left: 6vw;
+   border: 2px solid white;
+   border-radius: 5px;
+   backface-visibility: hidden;
+   transform-style: perserve-3d;
+   transition: 3s;
+   animation: donate 1s 1 3s, bgcolor 5s infinite;
+   }
+  .payment-container:hover{
+   animation-play-state: paused;
+  }
+  @keyframes donate {
+    0%{
+   transform: rotatey(0deg);
+   }
+    100%{
+   transform: rotatey(360deg);
+   }
+   }
+   @keyframes bgcolor {
+    0%{
+     box-shadow: 0 0 25px #0df3ff;
+    }
+   50%{
+   box-shadow: 0 0 25px #FF44CC;
+   }
+    100%{
+   box-shadow: 0 0 25px #39FF14;
+   }
+   }
+  
+ 
+  .donate-btn {
+  margin-top: 20px;
+  position: relative;
+  width: 8vw;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+   padding: .7em;
+  font-size: .8rem;
+  transition: 0.2s;
+  animation: box 3s infinite alternate;
+}
+
+.donate-btn:hover {
+  transform: scale(1.2);
+}
+  @keyframes box {
+  0% {
+    box-shadow: #27272c;
+    letter-spacing: 0.1rem;
+    background: #444;
+    color: yellow;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+    letter-spacing: 0.15rem;
+    background: var(--clr);
+    color: var(--clr);
+  }
+}
+
+.donate-btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+.donate-btn span {
+  position: relative;
+  z-index: 1;
+}
+.donate-btn i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+ .donate-btn i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+  animation: move1 3s infinite alternate;
+}
+
+ .donate-btn i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+  animation: move2 3s infinite alternate;
+}
+ @keyframes move1 {
+  0% {
+    transform: translateX(0);
+    width: 10px;
+    left: 80%;
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    width: 15px;
+    left: 20%;
+    
+  }
+}
+
+ @keyframes move2 {
+  0% {
+    transform: translateX(0);
+    width: 10px;
+    left: 20%;
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    width: 15px;
+    left: 80%;
+    
+  }
+}
+
+ .payment-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+    
+
+    
